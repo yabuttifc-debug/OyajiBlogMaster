@@ -1,0 +1,39 @@
+# ===== Blogger / Google API =====
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+
+# ===== 認証情報の暗号化 =====
+cryptography
+
+# ===== 資料テキスト抽出（PDF / Word / PowerPoint） =====
+python-docx
+pdfplumber
+python-pptx
+
+# ===== 環境変数 =====
+python-dotenv
+
+# ===== HTTP通信（Discord通知・画像アップロード） =====
+requests
+
+# ===== AI記事生成（Anthropic Claude API） =====
+anthropic
+
+# ===== 顔ぼかし処理 =====
+opencv-python
+# ※ HEIC(iPhone写真)を読み込むために必要
+pillow-heif
+# ※ 顔検出ライブラリ。注意: mediapipe 0.10.30 以降は旧 mp.solutions API が
+#    廃止されており、modules/face_blur.py はそのままでは動きません。
+#    （README「顔ぼかしの注意点」参照。旧APIを使う場合は mediapipe==0.10.14 を指定）
+mediapipe
+
+# ===== リール動画生成（Instagram用 / reel_make.py・reel_quest.py） =====
+imageio
+# ※ ffmpeg バイナリを同梱（OSへの別途インストール不要）
+imageio-ffmpeg
+# ※ Pillow は pillow-heif 経由、numpy は opencv-python 経由でも入りますが、
+#    リール生成で直接使うため明示しておきます。
+Pillow
+numpy

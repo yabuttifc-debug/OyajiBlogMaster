@@ -1,0 +1,29 @@
+# ===== 認証情報・秘密情報（絶対に共有しない） =====
+.env
+creds/
+!creds/.gitkeep
+client_secrets.json          # Google OAuth クライアントシークレット（各自で取得）
+*.enc                        # 暗号化済み認証情報
+*.salt                       # 暗号化ソルト
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# ===== 個人情報・生成物（共有不要） =====
+Image/                       # 子どもの写真など個人情報を含むため除外
+Plan/                        # 各イベントの内部計画資料
+ACTO_Report/
+current_post.html            # 編集中の一時ファイル
+article.html                 # 新規作成中の一時ファイル
+*_draft.html                 # 各種下書きHTML
+plan_dump.txt
+plan_water.txt
+reg.html
+
+# ===== 顔検出モデル（再ダウンロード可・サイズ大） =====
+*.tflite
+*.onnx
